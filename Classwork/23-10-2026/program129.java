@@ -1,0 +1,35 @@
+
+import java.util.Scanner;
+
+class Digit {
+
+    public int sumDigits(int iNo) {
+
+        int iSum = 0;
+        if (iNo < 0) {
+            iNo = -iNo;
+        }
+        while (iNo != 0) {
+
+            iSum = iSum + (iNo % 10);
+
+            iNo = iNo / 10;
+        }
+        return iSum;
+    }
+
+}
+
+class program129 {
+
+    public static void main(String A[]) {
+        Scanner Scanner = new Scanner(System.in);
+        int iRet = 0;
+        Digit digit = new Digit();
+        System.out.println("Enter Number\n");
+        int iValue = Scanner.nextInt();
+        iRet = digit.sumDigits(iValue);
+        System.out.println("Summation of Digits:" + iRet);
+
+    }
+}
